@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
+	<servlet>
+	     <servlet-name>helloServlet</servlet-name>
+	     <!-- 需要填写servlet完整的类名
+	                      注:
+	          servlet容器会利用java反射机制来加载
+	          servlet,并且将其实例化
+	      -->
+	     <servlet-class>web.HelloServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	     <servlet-name>helloServlet</servlet-name>
+	     <!-- 
+	        url-patten用来告诉容器,该
+	        servlet处理那些请求.
+	      -->
+	     <url-pattern>/hello</url-pattern>
+	</servlet-mapping>
+	<servlet>
+	     <servlet-name>bmiservlet</servlet-name>
+	     <servlet-class>web.BMIservlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	     <servlet-name>bmiservlet</servlet-name>
+	     <url-pattern>/bmi</url-pattern>
+	</servlet-mapping>
+</web-app>
